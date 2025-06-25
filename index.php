@@ -1,8 +1,7 @@
 <?php
 include 'db.php';
 
-
-$sql = $conn->query("select id,title,author_name,category,publish_date,image_name from blogs where status='published'");
+$sql = $conn->query("SELECT id, title, author_name, category, publish_date, image_name FROM blogs WHERE status='published'");
 ?>
 
 <!DOCTYPE html>
@@ -82,29 +81,24 @@ $sql = $conn->query("select id,title,author_name,category,publish_date,image_nam
   </div>
 
   <div class="row g-4">
-
-<?php
-
-while($row = $sql->fetch_assoc()){
-?>
-    <!-- Post Card -->
-  
-    <div class="col-md-4">
-         <a href="blog.php?id=<?php echo $row['id']?>">
-      <div class="card post-card">
-        <img src="uploads/<?= $row["image_name"] ?>" class="card-img-top post-img" alt="Post Image">
-        <div class="card-body">
-          <h5 class="card-title"><?php echo $row["title"];?></h5>
-          <p class="text-muted mb-1">Category: <strong><?php echo $row["category"];?></strong></p>
-          <p class="text-muted mb-1">Date: <strong><?php echo $row["publish_date"]; ?></strong></p>        
-       <p class="text-muted mb-1">Author: <strong><?php echo $row["author_name"];?></strong></p>
-        </div>
+    <?php while($row = $sql->fetch_assoc()) { ?>
+      <!-- Post Card -->
+      <div class="col-12 col-sm-6 col-lg-4">
+        <a href="blog.php?id=<?php echo $row['id'] ?>" class="text-decoration-none text-dark">
+          <div class="card post-card h-100">
+            <img src="uploads/<?= $row["image_name"] ?>" class="card-img-top post-img" alt="Post Image">
+            <div class="card-body">
+              <h5 class="card-title"><?php echo $row["title"]; ?></h5>
+              <p class="text-muted mb-1">Category: <strong><?php echo $row["category"]; ?></strong></p>
+              <p class="text-muted mb-1">Date: <strong><?php echo $row["publish_date"]; ?></strong></p>        
+              <p class="text-muted mb-1">Author: <strong><?php echo $row["author_name"]; ?></strong></p>
+            </div>
+          </div>
+        </a>
       </div>
-    <!-- End Post Card -->
-
-    <a href="blog.php?id=<?php $row['id']?>">
+      <!-- End Post Card -->
+    <?php } ?>
   </div>
-  <?php  } ?>
 </div>
 
 <script src="https://cdn.jsdelivr.net/npm/bootstrap@5.3.2/dist/js/bootstrap.bundle.min.js"></script>
