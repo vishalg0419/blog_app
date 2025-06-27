@@ -92,6 +92,13 @@ $result = $sql -> get_result();
 
       <!-- Main content -->
       <main class="col-md-10 ms-sm-auto col-lg-10 content">
+<div
+  class="container"
+>
+ <h3 class="mb-4 text-end me-3">Hello <?php echo $username; ?></h3>
+
+</div>
+
         <h2 class="mb-4">Dashboard</h2>
 
         <!-- Stats cards -->
@@ -108,7 +115,7 @@ $result = $sql -> get_result();
             <div class="card text-white bg-success">
               <div class="card-body">
                 <h5 class="card-title">Total Users</h5>
-                <p class="card-text fs-4">17</p>
+                <p class="card-text fs-4">6</p>
               </div>
             </div>
           </div>
