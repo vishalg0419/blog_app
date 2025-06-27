@@ -9,8 +9,9 @@
 <p align="center">
   <a href="https://github.com/vishalg0419/blog_app/stargazers"><img src="https://img.shields.io/github/stars/vishalg0419/blog_app?style=social" alt="Stars"></a>
   <a href="https://github.com/vishalg0419/blog_app"><img src="https://img.shields.io/badge/PRs-welcome-brightgreen.svg" alt="PRs welcome"></a>
-  <img src="https://img.shields.io/badge/PHP-8.x-blue.svg" alt="PHP">
-  <img src="https://img.shields.io/badge/License-MIT-yellow.svg" alt="MIT">
+  <img src="https://img.shields.io/badge/PHP-blue.svg" alt="PHP">
+   <img src="https://img.shields.io/badge/Mysql-blue.svg" alt="Mysql">
+     <img src="https://img.shields.io/badge/Bootstrap-blue.svg" alt="Bootstrap">
 </p>
 
 > **BlogApp** is a lightweight PHP & MySQL blogging platform where users can **register, login, write, edit, delete, publish or draft posts**, and explore everyone else’s content in a clean Bootstrap interface.  
